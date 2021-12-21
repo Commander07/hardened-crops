@@ -3,7 +3,7 @@
   "id": "hardened-crops",
   "version": "${version}",
   "name": "Hardened Crops",
-  "description": "Makes crops/farmland require more force in order to remove",
+  "description": "Makes players have to fall higher in order to break farmland.",
   "authors": [
     "Commander07"
   ],
@@ -12,7 +12,7 @@
     "repo": "https://github.com/Commander07/hardened-crops"
   },
   "license": "MIT",
-  "icon": "assets/hardened-crops/icon.png",
+  "icon": "assets/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
