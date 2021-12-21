@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "hardened-crops",
+  "version": "${version}",
+  "name": "Hardened Crops",
+  "description": "Makes crops/farmland require more force in order to remove",
+  "authors": [
+    "Commander07"
+  ],
+  "contact": {
+    "website": "https://modrinth/mod/hardened-crops",
+    "repo": "https://github.com/Commander07/hardened-crops"
+  },
+  "license": "MIT",
+  "icon": "assets/hardened-crops/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.commander07.hardenedcrops.HardenedCrops"
+    ]
+  },
+  "mixins": [
+    "hardened-crops.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.1"
+  }
+}
