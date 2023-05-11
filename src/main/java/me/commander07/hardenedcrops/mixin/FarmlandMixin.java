@@ -20,9 +20,9 @@ public class FarmlandMixin {
     @Inject(method = "onLandedUpon", at = @At("HEAD"), cancellable = true)
     private void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance, CallbackInfo ci) {
         if (!world.isClient && SimpleConfig.of("hardened-crops").request().getOrDefault("height", 1) < fallDistance && entity instanceof LivingEntity && (entity instanceof PlayerEntity || world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) && entity.getWidth() * entity.getWidth() * entity.getHeight() > 0.512f) {
-            FarmlandBlock.setToDirt(state, world, pos);
+            FarmlandBlock.setToDirt(entity, state, world, pos);
         }
-        entity.handleFallDamage(fallDistance, 1.0f, DamageSource.FALL);
+        entity.handleFallDamage(fallDistance, 1.0f, entity.getDamageSources().fall());
         ci.cancel();
     }
 }
